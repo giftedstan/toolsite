@@ -1,0 +1,134 @@
+{% extends 'core/base.html' %} {% load static %} {% block title %}Tiktok Downloader{% endblock title %}{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-10 mx-auto">
+            <!-- <script type="text/javascript">
+                atOptions = {
+                    'key': 'c54cfdaa1fa9691a00bfa7f06c2d2f0c',
+                    'format': 'iframe',
+                    'height': 50,
+                    'width': 320,
+                    'params': {}
+                };
+                document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.variousformatscontent.com/c54cfdaa1fa9691a00bfa7f06c2d2f0c/invoke.js"></scr' + 'ipt>');
+            </script> -->
+            <!-- Intech Ads - Ad Display Code -->
+            <div id="adm-container-5484"></div>
+            <script data-cfasync="false" async type="text/javascript" src="//intechads.com/display/items.php?5484&1626&728&90&0&0&2"></script>
+            <!-- Intech Ads - Ad Display Code -->
+        </div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-12">
+            <p class="text-responsive text-center text-white ">Paste your Tiktok video link and click Go</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-md-1"></div>
+        <div class="col-12 col-md-10 px-3">
+            <form action="{% url 'tiktok_index' %}" method="POST">
+                {% csrf_token %}
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="{{form.link.id_for_label}}">{{form.link.label}}</span>
+                    </div>
+                    {{form.link}}
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-danger">Go</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="offset-md-1"></div>
+    </div>
+
+    {% if messages %} {% for message in messages %}
+    <div {% if message.tags %} class='bg-{{message.tags}} text-center p-4 mt-5 border rounded sadow-lg' {% endif %}>
+        <p class="h3">{{message}}</p>
+    </div>
+    {% endfor %} {% endif %}
+
+    <!-- download page only -->
+    {% if download %}
+
+    <div class="row mt-5 shadow-lg rounded">
+        <div class="col-md-6 mx-auto py-3">
+            <table class="table table-condensed table-striped table-bordered">
+                <thead>
+                    <tr class="bg-primary">
+                        <td><b>Server</b></td>
+                        <td><b>Format</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="{{sdvideo_url}}" download="" title="Right Click and Save to start Downloading" class="btn btn-danger btn-sm btn-block">Download Link 1</a></td>
+                        <td><strong>video/mp4</strong></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{sdvideo_url}}" download="" title="Right Click and Save to start Downloading" target="_blank" class="btn btn-danger btn-sm btn-block">Download Link 2</a></td>
+                        <td><strong>Video/Mp4</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+    <!-- end download page only -->
+
+    <div class="row pt-5" id="help">
+        <div class="col-12">
+            <p class="text-responsive text-center text-white">How to download Tiktok video online?</p>
+        </div>
+    </div>
+    <div class="row pt-2 text-white text-center">
+        <div class="col-12 col-md-4 pb-2">
+            <div class="border rounded p-4 shadow">
+                <div class="h3">Copy Reels URL</div>
+                <div class="p">Copy your video URL from Tiktok that you need to download. You can use Ctrl+C or with the context menu.</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 pb-2">
+            <div class="border rounded p-4 shadow">
+                <div class="h3 py-1">Paste in search field</div>
+                <div class="p py-2">Paste Tiktok video URL in the search field and click 'Go'. Use Ctrl+V.</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 pb-2">
+            <div class="border rounded p-4 shadow">
+                <div class="h3">Download Video</div>
+                <div class="p">You will get a list of files for download video, Click the 'Download' button to start downloading the file</div>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-2 bg-light text-dark">
+        <div class="col-12 pb-2">
+            <div class="border rounded p-4 shadow">
+                <p>TikTok to mp4, TikTok Video mp4, Musically Video Download, Download Musically Videos, Save Tik Tok Video, Download Musically Videos, Musically Videos Download, Tik Tok Video Save, Download Tik Tok Video Online, Tik Tok Video Downloader,
+                    TikTok Downloader, Online Free TikTok Video Downloader, Tik Tok Video Downloader, Tik Tok Video Status Download</p>
+                <p>This is a very easy tool, from here you can easily download Tik Tok video without watermark from your desktop, laptop, or your mobile. You can easily download love TikTok videos, sad TikTok videos, romantic TikTok videos &amp; songs &amp;
+                    images from TikTok.You can also download the TikTok video in mp4, mp3 720, or another format. If you are using mobile and want to download TikTok videos via mobile, then I am going to tell you to step how you can save TikTok videos
+                    through your mobile and you can download TikTok video status easily. So let's go.</p>
+                <h3><strong>(If You want to use Mobile, Android, or IOS)How to Save Tik Tok Videos Without Watermark?</strong></h3>
+                <p>Step 1: - First of all, open the website of tiktok.com on your mobile or ios.</p>
+                <p>Step 2: - Then after that, you click on the arrow made in the top menu.</p>
+                <p>Step 3: - After clicking on the arrow, a slid will be open, in which you will get the option of trending link, by clicking on it, you open the video list of TikTok.</p>
+                <p>Step 4: - After opening the video list of TikTok, you click on the share link of any video (the TikTok video you want to save).</p>
+                <p>Step 5: - Then you will get some options to share but you have to copy the link of the video by clicking on the link button.</p>
+                <p>Step 6: - After copying the video link of TikTok, you paste it in the search box and then click the download button.</p>
+                <p>Step 7: - You will get the option of a download link to download the video from where you can download your video easily.</p>
+                <p>Tiktok videos have become the most popular in today's time. Everyone is uploading to your TikTok by making your funny video to be popular. But I would like to tell you that you can download online free TikTok video with the help of this
+                    site. Are. This is a free TikTok video downloader platform that allows you to download any funny TikTok video. How to download video with desktop or mobile, you will be told step by step by help with this site.</p>
+                <h3><strong>(If you are Using Desktop)How to download video from tiktok.com?</strong></h3>
+                <p>Step 1:- First of all, you can visit the website of tiktok.com, then by clicking on the trending menu link, you can open TikTok's video list. If you want, you can also go to the video list by clicking on the given link. Go to Tiktok Video
+                    List
+                </p>
+                <p>Step 2:- Then after that click on any video you open and then copy the browser link. You can also see it in the given image below.</p>
+                <p>Step 3:- After copying the video link, paste this link into the search box above, after pasting the video link, click on the download button.</p>
+                <p>Step 4:- After clicking on the download button you will get the format of the video link, you can take the curser on the download link and right-click by clicking save as. You can download the video.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
