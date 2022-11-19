@@ -1,0 +1,60 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Free Online service to Download YouTube videos at one click! The best YouTube Downloader supporting fast and easy vimeo, Facebook and Dailymotion video Download and much more!">
+    <meta name="keywords" content="Pinterest Video Downloader, Youtube Video Downloader, Online Video Downloader, Wordpress Templates Free, Html Templates Wordpress Plugins">
+    <meta name="author" content="giftedstan">
+    <meta name="google-site-verification" content="OGKMEwKoyv7ALeT24-oaX27P2p0PxGR5vASIz5CgDuI" />
+    <title>{% block title %}Online Downloader{% endblock title %}-ST9JA.COM</title>
+    <link rel="icon" type="image/png" href="{% static 'core/images/logo.png' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E89G4SN320"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5022275611303364" crossorigin="anonymous"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-E89G4SN320');
+    </script>
+    <meta name="admverifysite" content="bf82eb2f149d0b551b666d8db6afe7c0" />
+</head>
+
+<body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <div>
+        {% include 'core/navbar.html' %}
+    </div>
+
+    {% block header %} {% endblock header %}
+    <div class="container-fluid indigo">
+        <div>
+            {% block content %} {% endblock content %}
+        </div>
+    </div>
+
+    <div>
+        {% include 'core/footer.html' %}
+    </div>
+
+    <script src="{% static 'core/js/jquery.js' %}"></script>
+    <script src="{% static 'core/js/popper.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'core/js/all.min.js' %}"></script>
+    <script src="{% static 'core/js/script.js' %}"></script>
+</body>
+
+</html>

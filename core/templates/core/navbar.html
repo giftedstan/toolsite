@@ -1,0 +1,34 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-mainbg">
+    <a class="navbar-brand navbar-logo" href="{% url 'home' %}">
+        <img height="40vh" src="{% static 'core/images/logo.png' %}"> Online Downloader</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <div class="hori-selector">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <li class="nav-item {{home_active}}">
+                <a class="nav-link {{home_disabled}}" href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="nav-item {{pinterest_active}}">
+                <a class="nav-link {{youtube_disabled}}" href="{% url 'pinterest_index' %}"><i class="fab fa-pinterest"></i> Pinterest</a>
+            </li>
+            <li class="nav-item {{youtube_active}}">
+                <a class="nav-link {{youtube_disabled}}" href="{% url 'youtube_index' %}"><i class="fab fa-youtube"></i> YouTube</a>
+            </li>
+            <li class="nav-item {{reels_active}}">
+                <a class="nav-link {{youtube_disabled}}" href="{% url 'reels_index' %}"><i class="fab fa-instagram"></i> Reels</a>
+            </li>
+            <li class="nav-item {{tiktok_active}}">
+                <a class="nav-link {{tiktok_disabled}}" href="{% url 'tiktok_index' %}"><i class="fab fa-instagram"></i> Tiktok</a>
+            </li>
+            <li class="nav-item {{template_active}}">
+                <a class="nav-link {{template_disabled}}" href="{% url 'temp_index' %}"><i class="fab fa-wordpress"></i> Template</a>
+            </li>
+        </ul>
+    </div>
+</nav>
